@@ -5,10 +5,11 @@ thanks to google/material-design-icons
 
 have fun!
 
-----------------------------------------------------
+---------------------------------------------------
 
-Marco 
-papuscoder@gmail.com
+![Print Screen of app](memory_screen.png?raw=true "Print Screen")
+
+
 
 ----------------------------------------------------
 usage:
@@ -23,3 +24,8 @@ compile:
 
 ant clean
 ant jar
+
+----------------------------------------------------
+
+Marco 
+papuscoder@gmail.com
