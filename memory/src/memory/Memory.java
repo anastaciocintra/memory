@@ -86,7 +86,7 @@ public class Memory {
         Collections.shuffle(listShuffle);
     }
     
-    private void Resolver(Boolean bMostrarCliques){
+    private void Solve(Boolean bMostrarCliques){
         if(intQtdOpened == -1) return;
         labelTitle.setText("Number of Clicks: " + 
                 (bMostrarCliques? intQtdOpened.toString():"Auto Resolution"));
@@ -103,7 +103,7 @@ public class Memory {
         }
         panelGrid.repaint();
     }
-    private void NovoJogo(){
+    private void NewGame(){
         Collections.shuffle(listShuffle);
         intQtdOpened = 0;
         intCombined = 0;
@@ -120,14 +120,14 @@ public class Memory {
         
         
     }
-    public void MontaJanela(){
+    public void ShowWindow(){
         frame = new JFrame("Memory");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
         
         
         
-        // Titulo
+        // Title
         labelTitle = new JLabel("Number of Clicks: 0");
         enlargeFont(labelTitle, 2);
         
@@ -155,14 +155,14 @@ public class Memory {
         buttonNew.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                NovoJogo();
+                NewGame();
             }
         });
 
         buttonSolve.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Resolver(false);
+                Solve(false);
             }
         });
 
@@ -234,7 +234,7 @@ public class Memory {
                             buttonLastClicked = null;
                             intCombined++;
                             if(intCombined >= 12){
-                                Resolver(true);
+                                Solve(true);
                             }
                                 
                         }else{
@@ -265,7 +265,8 @@ public class Memory {
             @Override
             public void run() {
                 Memory mem = new Memory();
-                mem.MontaJanela();
+                mem.ShowWindow();
+                
             }
         });
 
