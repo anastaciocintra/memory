@@ -27,5 +27,5 @@ ant jar
 
 ----------------------------------------------------
 
-Marco 
-papuscoder@gmail.com
+Marco Antonio Anastacio Cintra
+anastaciocintra@gmail.com
